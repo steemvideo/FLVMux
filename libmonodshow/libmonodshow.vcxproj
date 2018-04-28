@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug-Shared|Win32">
+      <Configuration>Debug-Shared</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug-Static|Win32">
+      <Configuration>Debug-Static</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release-Shared|Win32">
+      <Configuration>Release-Shared</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release-Static|Win32">
+      <Configuration>Release-Static</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5349B4FF-ED9B-4912-8058-550AF3E2DB80}</ProjectGuid>
+    <RootNamespace>libmonodshow</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-Shared|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Shared|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-Static|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Static|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release-Shared|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Shared|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release-Static|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Static|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27428.2015</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Static|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-Static|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Shared|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release-Shared|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Static|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\include;.\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>.\lib\strmbasDUS.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release-Static|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\include;.\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat />
+    </ClCompile>
+    <Lib>
+      <OutputFile>.\lib\strmbaseUS.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug-Shared|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\include;.\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>.\lib\strmbasDU.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release-Shared|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\include;.\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat />
+    </ClCompile>
+    <Lib>
+      <OutputFile>.\lib\strmbaseU.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\amextra.cpp" />
+    <ClCompile Include="src\amfilter.cpp" />
+    <ClCompile Include="src\amvideo.cpp" />
+    <ClCompile Include="src\arithutil.cpp" />
+    <ClCompile Include="src\basemux.cpp" />
+    <ClCompile Include="src\combase.cpp" />
+    <ClCompile Include="src\cprop.cpp" />
+    <ClCompile Include="src\ctlutil.cpp" />
+    <ClCompile Include="src\ddmm.cpp" />
+    <ClCompile Include="src\dllentry.cpp" />
+    <ClCompile Include="src\dllsetup.cpp" />
+    <ClCompile Include="src\mediasample_ex.cpp" />
+    <ClCompile Include="src\mtype.cpp" />
+    <ClCompile Include="src\outputq.cpp" />
+    <ClCompile Include="src\perflog.cpp" />
+    <ClCompile Include="src\pstream.cpp" />
+    <ClCompile Include="src\pullpin.cpp" />
+    <ClCompile Include="src\refclock.cpp" />
+    <ClCompile Include="src\renbase.cpp" />
+    <ClCompile Include="src\schedule.cpp" />
+    <ClCompile Include="src\seekpt.cpp" />
+    <ClCompile Include="src\source.cpp" />
+    <ClCompile Include="src\strmctl.cpp" />
+    <ClCompile Include="src\sysclock.cpp" />
+    <ClCompile Include="src\transfrm.cpp" />
+    <ClCompile Include="src\transip.cpp" />
+    <ClCompile Include="src\videoctl.cpp" />
+    <ClCompile Include="src\vtrans.cpp" />
+    <ClCompile Include="src\winctrl.cpp" />
+    <ClCompile Include="src\winutil.cpp" />
+    <ClCompile Include="src\wxdebug.cpp" />
+    <ClCompile Include="src\wxlist.cpp" />
+    <ClCompile Include="src\wxutil.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\amextra.h" />
+    <ClInclude Include="include\amfilter.h" />
+    <ClInclude Include="include\basemux.h" />
+    <ClInclude Include="include\cache.h" />
+    <ClInclude Include="include\checkbmi.h" />
+    <ClInclude Include="include\combase.h" />
+    <ClInclude Include="include\cprop.h" />
+    <ClInclude Include="include\ctlutil.h" />
+    <ClInclude Include="include\ddmm.h" />
+    <ClInclude Include="include\dllsetup.h" />
+    <ClInclude Include="include\dxmperf.h" />
+    <ClInclude Include="include\fourcc.h" />
+    <ClInclude Include="include\measure.h" />
+    <ClInclude Include="include\mediasample_ex.h" />
+    <ClInclude Include="include\msgthrd.h" />
+    <ClInclude Include="include\mtype.h" />
+    <ClInclude Include="include\outputq.h" />
+    <ClInclude Include="include\perflog.h" />
+    <ClInclude Include="include\perfstruct.h" />
+    <ClInclude Include="include\pstream.h" />
+    <ClInclude Include="include\pullpin.h" />
+    <ClInclude Include="include\refclock.h" />
+    <ClInclude Include="include\reftime.h" />
+    <ClInclude Include="include\renbase.h" />
+    <ClInclude Include="include\schedule.h" />
+    <ClInclude Include="include\seekpt.h" />
+    <ClInclude Include="include\source.h" />
+    <ClInclude Include="include\stdafx.h" />
+    <ClInclude Include="include\streams.h" />
+    <ClInclude Include="include\strmctl.h" />
+    <ClInclude Include="include\sysclock.h" />
+    <ClInclude Include="include\transfrm.h" />
+    <ClInclude Include="include\transip.h" />
+    <ClInclude Include="include\videoctl.h" />
+    <ClInclude Include="include\vtrans.h" />
+    <ClInclude Include="include\winctrl.h" />
+    <ClInclude Include="include\winutil.h" />
+    <ClInclude Include="include\wxdebug.h" />
+    <ClInclude Include="include\wxlist.h" />
+    <ClInclude Include="include\wxutil.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
